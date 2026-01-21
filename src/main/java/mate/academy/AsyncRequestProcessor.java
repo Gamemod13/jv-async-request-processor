@@ -23,7 +23,7 @@ public class AsyncRequestProcessor {
             } catch (InterruptedException e) {
                 throw new RuntimeException("Error during processRequest", e);
             }
-            UserData userData = new UserData(userId, "details");
+            UserData userData = new UserData(userId, "Details for " + userId);
             cache.put(userId, userData);
             return userData;
         }, executor);
